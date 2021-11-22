@@ -1,0 +1,11 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ecs-kubejo
+spec:
+  template:
+    spec:
+      containers:
+      - name: ecs-kubejob
+        image: tanishiking/ecs-kubejob-test:0.0.1
+      restartPolicy: Never
